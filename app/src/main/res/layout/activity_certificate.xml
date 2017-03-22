@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_certificate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sprocomm.com.scancertificate.CertificateActivity">
+    <TextView
+        android:id = "@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:background="@android:color/darker_gray"
+        android:textSize="30sp"
+        android:text = "证件扫描"/>
+
+    <Button
+        android:id="@+id/scan_id_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "扫描身份证"/>
+    <Button
+        android:id="@+id/scan_bank_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "扫描银行卡"/>
+    <Button
+        android:id="@+id/import_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "导入照片"/>
+    <LinearLayout
+        android:id="@+id/ll_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/loading" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="扫描结果:"/>
+    <TextView
+        android:id = "@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"/>
+</LinearLayout>
